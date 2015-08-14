@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NerdLuv</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<link href="heart.gif" type="image/gif" rel="shortcut icon" />
+		<link href="{{ static_url("css/nerdluv.css") }}" type="text/css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="main">
+			<div id="bannerarea">
+				<img src="{{ static_url("images/nerdluv.png") }}" alt="banner logo" /> <br />
+				where meek geeks meet
+			</div>
+	
+			<div id="matches">
+				<h1>Matches for Marty Stepp</h1>
+
+				{%for one in matchList%}
+					<div class="match">
+						<p class="name">
+							<img src="{{one.img_url}}" alt="{{one.name}}" />
+							{{one.name}}
+						</p>
+
+						<p class="info">
+							<strong>gender:</strong>  {{one.gender}} <br />
+							<strong>age:</strong>     {{one.age}} <br />
+							<strong>type:</strong>    {{one.type}} <br />
+							<strong>OS:</strong>      {{one.OS}} <br />
+							<strong>rating:</strong>  {{one.rating}}
+						</p>
+					</div>
+				{%end%}
+			</div>
+		</div>
+		
+		<p>
+			Results and page (C) Copyright 2009 NerdLuv Inc.
+		</p>
+
+		<div id="w3c">
+			<a href="http://validator.w3.org/check/referer">
+				<img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" /></a>
+		</div>
+	</body>
+</html>

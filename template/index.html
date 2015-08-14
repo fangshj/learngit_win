@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<!-- CSE 190 M Homework 4 (NerdLuv) -->
+	<head>
+		<title>NerdLuv</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<link href="heart.gif" type="image/gif" rel="shortcut icon" />
+		<link href="{{ static_url("css/nerdluv.css") }}" type="text/css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="main">
+			<div id="bannerarea">
+			<img src="{{ static_url("images/nerdluv.png") }}" alt="banner logo" /> <br />
+			where meek geeks meet
+			</div>
+
+			<div id="signup">
+				New User Signup:
+			</div>
+
+			<form action="/results.html" enctype="multipart/form-data" method="post">
+				<div>
+					<strong>Name:</strong>
+					<input type="text" name="name" size="16"/><br>
+				</div>
+
+				<div>
+					<strong>Gender:</strong>
+					<label><input type="radio" name="gender" value="M"/> Male</label>
+					<label><input type="radio" name="gender" value="F" checked="checked" /> Female</label>
+				</div>
+
+				<div>
+					<strong>Age:</strong>
+					<input type="text" name="age" size="5" maxlength="2" />
+				</div>
+
+				<div>
+					<strong>Personality type:</strong>
+					<input type="text" name="type" size="5" maxlength="4" />
+					(<a href="http://www.humanmetrics.com/cgi-win/JTypes2.asp">Don't know your type?</a>)
+				</div>
+
+				<div>
+					<strong>Favorite OS:</strong>
+						<select name="OS">
+						<option selected="selected">Windows</option>
+						<option>Mac OS X</option>
+						<option>Linux</option>
+						<option>other</option>
+						</select>
+				</div>
+					<strong>Photo:</strong>
+					 <input name="file" type="file" accept="image/jpeg"/>
+				<div>
+
+				</div>
+
+				<div id="seeking">
+					<strong>Seeking:</strong>
+						<label><input type="checkbox" name="seekMale" checked="checked" /> Male</label>
+						<label><input type="checkbox" name="seekFemale" /> Female</label>
+				</div>
+
+				<div>
+					<strong>Between ages:</strong>
+					<input type="text" name="minAge" size="5" maxlength="2" /> and
+					<input type="text" name="maxAge" size="5" maxlength="2" />
+				</div>
+
+				<div>
+					<input type="submit" value="Sign Up" />
+				</div>
+			</form>
+		</div>
+		
+		<p>
+			Results and page (C) Copyright 2009 NerdLuv Inc.
+		</p>
+
+		<div id="w3c">
+			<a href="http://validator.w3.org/check/referer">
+				<img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" /></a>
+		</div>
+	</body>
+</html>
+
+	
